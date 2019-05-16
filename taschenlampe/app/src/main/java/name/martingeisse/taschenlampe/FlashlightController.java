@@ -20,7 +20,7 @@ public class FlashlightController {
         if (active && camera == null) {
             camera = Camera.open();
             Camera.Parameters parameters = camera.getParameters();
-            // TODO parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+            parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
             camera.setParameters(parameters);
             camera.startPreview();
         } else if (!active && camera != null) {
